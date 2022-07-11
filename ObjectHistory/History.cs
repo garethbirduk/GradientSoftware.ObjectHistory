@@ -1,6 +1,7 @@
-﻿using System.Collections.Immutable;
+﻿using Newtonsoft.Json;
+using System.Collections.Immutable;
 
-namespace ObjectHistory
+namespace Gradient.ObjectHistory
 {
     /// <summary>
     /// The object that holds a deep-copy history of the instance
@@ -108,7 +109,7 @@ namespace ObjectHistory
         /// <param name="value"></param>
         /// <returns></returns>
         /// <exception cref="NotSupportedException"></exception>
-        internal bool AddValue(T value)
+        public bool AddValue(T value)
         {
             // null check
             if (value == null)
@@ -161,14 +162,13 @@ namespace ObjectHistory
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        internal bool InsertBefore(T item)
+        public bool InsertBefore(T item)
         {
             foreach (var key in DataHistory.Keys.Where(x => x > Key).ToList())
                 DataHistory.Remove(key);
             DataHistory.Add(Key + 1, DataHistory[Key]);
             DataHistory[Key] = item;
             Key++;
-
             return true;
         }
 
@@ -176,5 +176,6 @@ namespace ObjectHistory
         /// The most recent undo/redo operation performed
         /// </summary>
         public UndoOperation LastUndoOperation = UndoOperation.None;
+
     }
 }

@@ -1,8 +1,8 @@
+using Gradient.ObjectHistory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ObjectHistory;
 using System;
 
-namespace ObjectHistoryTest
+namespace Gradient.ObjectHistoryTest
 {
     [TestClass]
     public class TestHistory
@@ -143,110 +143,5 @@ namespace ObjectHistoryTest
             Assert.AreEqual(11, history.Data[1]);
             Assert.AreEqual(1, history.Data[2]);
         }
-
-
-
-        //[TestMethod]
-        //public void TestMyClass()
-        //{
-        //    var history = History<MyClass>.Create(null);
-        //    Assert.AreEqual(1, history.Data.Count);
-
-        //    history.AddValue(new MyClass("Andy", 123));
-        //    Assert.AreEqual(1, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-
-        //    history.AddValue(new MyClass("Bob", 456));
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-        //}
-
-        //[TestMethod]
-        //public void TestDontAddNullToNull()
-        //{
-        //    var history = new History<MyClass>(false);
-        //    Assert.AreEqual(0, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(1, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(1, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(new MyClass("Andy", 123));
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(3, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.Undo(); // null => Andy
-        //    Assert.AreEqual(3, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-
-        //    history.Undo(); // Andy => null
-        //    Assert.AreEqual(3, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    var bob = new MyClass("Bob", 456);
-        //    history.AddValue(bob);
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-
-        //    history.AddValue(bob);
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-        //}
-
-        //[TestMethod]
-        //public void TestRejectNull()
-        //{
-        //    var history = new History<MyClass>(true);
-        //    Assert.AreEqual(0, history.Data.Count);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(0, history.Data.Count);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(0, history.Data.Count);
-
-        //    history.AddValue(new MyClass("Andy", 123));
-        //    Assert.AreEqual(1, history.Data.Count);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(1, history.Data.Count);
-        //}
-
-        //[TestMethod]
-        //public void TestDontAddNullToNullList()
-        //{
-        //    var history = new History<List<MyClass>>(true);
-        //    Assert.AreEqual(0, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(0, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(null);
-        //    Assert.AreEqual(0, history.Data.Count);
-        //    Assert.IsNull(history.Value);
-
-        //    history.AddValue(new List<MyClass>() { new MyClass("Andy", 123) });
-        //    Assert.AreEqual(1, history.Data.Count);
-        //    Assert.IsNotNull(history.Value);
-
-        //    history.AddValue(new List<MyClass>() { null });
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNull(history.Value.First());
-
-        //    history.Undo(); // null => Andy 
-        //    Assert.AreEqual(2, history.Data.Count);
-        //    Assert.IsNotNull(history.Value.First());
-        //}
     }
 }

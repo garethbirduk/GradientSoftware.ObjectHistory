@@ -1,4 +1,4 @@
-namespace ObjectHistoryTest
+namespace Gradient.ObjectHistoryTest
 {
     public class MyClass
     {

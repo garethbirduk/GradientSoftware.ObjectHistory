@@ -1,4 +1,4 @@
-﻿namespace ObjectHistory
+﻿namespace Gradient.ObjectHistory
 {
     /// <summary>
     /// Options for what to do when the NullCondition is violated. When violated, the code will exit its method, and may either throw an exception or not.

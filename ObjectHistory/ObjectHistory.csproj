@@ -3,6 +3,35 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageProjectUrl></PackageProjectUrl>
+    <Copyright>© 2022 Gareth Bird</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/garethbirduk/GradientSoftware.ObjectHistory</RepositoryUrl>
+    <PackageTags>object history; undo; redo; gradient; software</PackageTags>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <FileVersion>0.0.1</FileVersion>
+    <PackageId>GradientSoftware.$(AssemblyName)</PackageId>
+    <Company>Gradient Software</Company>
+    <Authors>Gareth Bird</Authors>
+    <PackageIcon>icon.png</PackageIcon>
+    <Description>A simple mechanism to store a history of an object's value with undo and redo.</Description>
+    <Version>0.1.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
 
 </Project>

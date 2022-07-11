@@ -1,4 +1,4 @@
-﻿namespace ObjectHistory
+﻿namespace Gradient.ObjectHistory
 {
     /// <summary>
     /// The undo/redo state

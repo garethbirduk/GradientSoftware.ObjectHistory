@@ -1,4 +1,4 @@
-﻿namespace ObjectHistory
+﻿namespace Gradient.ObjectHistory
 {
     /// <summary>
     /// Options for allowing nulls to be set to the history of the object
