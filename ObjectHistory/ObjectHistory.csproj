@@ -16,7 +16,7 @@
     <Authors>Gareth Bird</Authors>
     <PackageIcon>icon.png</PackageIcon>
     <Description>A simple mechanism to store a history of an object's value with undo and redo.</Description>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
